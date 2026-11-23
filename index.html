@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="pt-MZ">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f8f5ef" />
+  <meta name="description" content="Um convite especial para celebrar os 50 anos de Dulce Marcos. 4 de Dezembro de 2026, às 18h, no Salão do Kitanda, Cidade Baixa." />
+  <meta property="og:title" content="Dulce Marcos · 50 anos" />
+  <meta property="og:description" content="Um momento especial, uma celebração inesquecível. O seu convite está aqui." />
+  <meta property="og:type" content="website" />
+  <title>Dulce Marcos · Uma celebração de 50 anos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;450;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preload" href="assets/dulce-hero.webp" as="image" type="image/webp" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-grain" aria-hidden="true"></div>
+  <header class="site-header" id="topo">
+    <a class="brand" href="#topo" aria-label="Dulce Marcos, início">
+      <span class="brand-symbol">D<span class="brand-dot">.</span>M</span>
+      <span class="brand-caption">CINQUENTA ANOS</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Navegação principal">
+      <a href="#celebracao">A celebração</a>
+      <a href="#detalhes">Os detalhes</a>
+      <a class="nav-confirm" href="#confirmar">Confirmar presença <span aria-hidden="true">↗</span></a>
+    </nav>
+    <a class="mobile-nav-link" href="#confirmar">Confirmar <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow fade-up"><span class="small-line"></span> UM CONVITE MUITO ESPECIAL</p>
+        <p class="hero-intro fade-up delay-1">A vida é feita de momentos<br />que merecem ser celebrados.</p>
+        <h1 id="hero-title" class="hero-name fade-up delay-2">Dulce<span>Marcos</span></h1>
+        <div class="hero-occasion fade-up delay-3">
+          <span class="hero-fifty">50</span>
+          <div class="hero-occasion-side"><span>ANOS</span><span>DE HISTÓRIAS</span><span>E DE VIDA</span></div>
+        </div>
+        <p class="hero-subtitle fade-up delay-3">Uma celebração de amor, gratidão e novas memórias. E você faz parte desta história.</p>
+        <a class="gold-button fade-up delay-4" href="#convite">Descobrir o convite <span aria-hidden="true">↘</span></a>
+        <div class="hero-footnote fade-up delay-4"><span class="diamond-mini" aria-hidden="true">✦</span> 04 DE DEZEMBRO DE 2026 <span class="diamond-mini" aria-hidden="true">✦</span> MAPUTO</div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-photo-frame"><img src="assets/dulce-hero.webp" alt="Dulce Marcos com um elegante conjunto dourado num jardim" fetchpriority="high" /></div>
+        <div class="hero-stamp" aria-hidden="true"><span>UMA VIDA</span><strong>50</strong><span>PARA CELEBRAR</span></div>
+        <span class="hero-visual-annotation" aria-hidden="true">UM MARCO. INFINITAS MEMÓRIAS.</span>
+        <div class="visual-border" aria-hidden="true"></div>
+      </div>
+      <div class="scroll-cue" aria-hidden="true"><span>DESLIZE PARA DESCOBRIR</span><i></i></div>
+    </section>
+
+    <section class="special-invite section-pad" id="carta" aria-labelledby="special-invite-title">
+      <div class="special-invite-wrap reveal">
+        <p class="eyebrow centered" id="special-invite-title">UM CONVITE ESPECIAL</p>
+        <button class="envelope-scene" id="envelope-trigger" type="button" aria-expanded="false" aria-controls="letter-card">
+          <span class="envelope-shadow" aria-hidden="true"></span>
+          <span class="envelope-back" aria-hidden="true"></span>
+          <span class="envelope-letter" id="letter-card">
+            <span class="letter-inner">
+              <span class="letter-title">Dulce Marcos</span>
+              <strong>50 anos</strong>
+              <small>04 de Dezembro de 2026 · 18h00</small>
+            </span>
+          </span>
+          <span class="envelope-front" aria-hidden="true"></span>
+          <span class="envelope-flap" aria-hidden="true"></span>
+          <span class="envelope-seal" aria-hidden="true">DM</span>
+        </button>
+        <p class="tap-hint">Toque para abrir</p>
+      </div>
+    </section>
+
+    <section class="countdown-section section-pad reveal" id="contagem" aria-labelledby="countdown-title">
+      <div class="countdown-card">
+        <p class="eyebrow centered">FALTAM</p>
+        <h2 id="countdown-title" class="sr-only">Contagem regressiva para a festa</h2>
+        <div class="countdown-grid" aria-live="polite">
+          <div class="countdown-box"><strong id="countdown-days">00</strong><span>DIAS</span></div>
+          <div class="countdown-box"><strong id="countdown-hours">00</strong><span>HORAS</span></div>
+          <div class="countdown-box"><strong id="countdown-minutes">00</strong><span>MIN</span></div>
+          <div class="countdown-box"><strong id="countdown-seconds">00</strong><span>SEG</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="invitation-note section-pad reveal" id="convite" aria-labelledby="convite-title">
+      <div class="ornament" aria-hidden="true"><span></span>✦<span></span></div>
+      <p class="eyebrow centered">UMA DATA PARA RECORDAR</p>
+      <h2 id="convite-title">Há celebrações que<br />são ainda mais bonitas<br /><em>quando partilhadas.</em></h2>
+      <p class="invitation-prose">Ao completar 50 anos, quero celebrar não apenas a passagem do tempo, mas cada encontro, cada sorriso e cada pessoa que tornou esta caminhada especial. Será uma alegria ter a sua presença neste momento tão importante.</p>
+      <div class="signature"><span>Com carinho,</span><strong>Dulce</strong></div>
+    </section>
+
+    <section class="gallery-section section-pad" id="celebracao" aria-labelledby="gallery-title">
+      <div class="section-heading reveal">
+        <div><p class="eyebrow">MOMENTOS QUE CONTAM HISTÓRIAS</p><h2 id="gallery-title">Uma vida em <em>flor.</em></h2></div>
+        <span class="heading-side">CINQUENTA ANOS<br/>DE BELEZA E GRATIDÃO</span>
+      </div>
+      <div class="gallery-grid">
+        <figure class="gallery-card gallery-card-main reveal"><img src="assets/dulce-galeria-1.webp" loading="lazy" alt="Dulce Marcos com um conjunto dourado, sorrindo num jardim" /><figcaption>Os momentos mais bonitos merecem ser vividos.</figcaption></figure>
+        <figure class="gallery-card gallery-card-tall reveal"><img src="assets/dulce-galeria-2.webp" loading="lazy" alt="Dulce Marcos com vestido estampado azul e bege" /><figcaption>01 <span>—</span> Um novo capítulo</figcaption></figure>
+      </div>
+      <div class="gallery-ending reveal"><span class="starburst" aria-hidden="true">✳</span><p>Cada ano, uma história.<br/><em>Cada história, uma bênção.</em></p></div>
+    </section>
+
+    <section class="details-section section-pad" id="detalhes" aria-labelledby="details-title">
+      <div class="details-top reveal"><p class="eyebrow">RESERVE ESTE MOMENTO NO CORAÇÃO</p><h2 id="details-title">O nosso <em>encontro.</em></h2><p>Uma noite especial merece a sua presença.</p></div>
+      <div class="event-card reveal">
+        <div class="event-corner top-left"></div><div class="event-corner top-right"></div><div class="event-corner bottom-left"></div><div class="event-corner bottom-right"></div>
+        <div class="event-topline"><span>CONVITE ESPECIAL</span><span>✦</span><span>DULCE · 50 ANOS</span></div>
+        <div class="date-large"><span class="date-day">04</span><div><span>SEXTA-FEIRA</span><strong>DEZEMBRO</strong><span>2026</span></div></div>
+        <div class="event-rule"><span>✦</span></div>
+        <div class="event-facts">
+          <div><span class="fact-label">HORÁRIO</span><strong>18h00</strong><small>Ao final da tarde</small></div>
+          <div><span class="fact-label">LOCAL</span><strong>Salão do Kitanda</strong><small>Cidade Baixa, Maputo</small></div>
+          <div><span class="fact-label">DRESS CODE</span><strong>Preto</strong><small>Elegância para celebrar</small></div>
+        </div>
+        <p class="event-bottom-note">A sua presença é o presente mais especial.</p>
+      </div>
+    </section>
+
+    <section class="rsvp-section section-pad" id="confirmar" aria-labelledby="rsvp-title">
+      <div class="rsvp-layout">
+        <div class="rsvp-aside reveal">
+          <span class="aside-rule"></span>
+          <p class="eyebrow">O MAIS IMPORTANTE É ESTARMOS JUNTOS</p>
+          <h2 id="rsvp-title">Conto com <em>você?</em></h2>
+          <p>Estamos a preparar uma noite inesquecível. Diga-nos se poderá estar presente para celebrarmos este dia juntos.</p>
+          <div class="aside-signoff">Com muito carinho,<br/><strong>Dulce Marcos</strong></div>
+        </div>
+        <div class="rsvp-card reveal">
+          <div id="rsvp-form-view">
+            <span class="form-mini-title">CONFIRMAÇÃO DE PRESENÇA <span>✦</span> RSVP</span>
+            <form id="rsvp-form" novalidate>
+              <label for="guest-name">O seu nome completo</label>
+              <input id="guest-name" name="name" type="text" autocomplete="name" placeholder="Como devemos chamar-lhe?" required minlength="3" maxlength="80" />
+              <span class="input-hint">Indique o nome que deseja utilizar na lista de convidados.</span>
+              <fieldset class="attendance-options">
+                <legend>Vai estar presente?</legend>
+                <label class="attendance-choice"><input type="radio" name="attending" value="sim" required /><span class="choice-icon" aria-hidden="true">✓</span><span><strong>Sim, estarei presente</strong><small>Será um prazer celebrar este dia!</small></span><span class="choice-check" aria-hidden="true"></span></label>
+                <label class="attendance-choice"><input type="radio" name="attending" value="nao" required /><span class="choice-icon" aria-hidden="true">—</span><span><strong>Não poderei comparecer</strong><small>Estarei presente em pensamento.</small></span><span class="choice-check" aria-hidden="true"></span></label>
+              </fieldset>
+              <div class="honeypot" aria-hidden="true"><label for="contact-site">Deixe este campo vazio</label><input id="contact-site" name="contact_site" type="text" tabindex="-1" autocomplete="off" /></div>
+              <div class="form-feedback" id="form-feedback" aria-live="polite"></div>
+              <button class="gold-button form-submit" id="submit-rsvp" type="submit">Enviar a minha resposta <span aria-hidden="true">→</span></button>
+              <p class="privacy-note">A sua resposta será registada de forma privada e comunicada à organização.</p>
+            </form>
+          </div>
+          <div id="rsvp-success" class="success-state" hidden aria-live="polite">
+            <div class="success-seal">✦</div>
+            <span class="form-mini-title">RESPOSTA REGISTADA</span>
+            <h3 id="success-heading">Obrigada!</h3>
+            <p id="success-message"></p>
+            <button class="text-action" type="button" id="edit-rsvp">Alterar a minha resposta <span aria-hidden="true">→</span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="footer-monogram">D<span>·</span>M</div><div class="footer-message">Momentos especiais são feitos de pessoas especiais.</div><div class="footer-bottom"><span>04 DE DEZEMBRO · 2026</span><span>FEITO COM CARINHO PARA DULCE MARCOS</span></div></footer>
+  <script src="app.js" defer></script>
+</body>
+</html>
