@@ -32,7 +32,7 @@ from pydantic import BaseModel, Field, field_validator
 
 load_dotenv()
 BASE = Path(__file__).resolve().parent
-STATIC = BASE / "static"
+STATIC = BASE / "static" if (BASE / "static" / "index.html").exists() else BASE
 DB_PATH = Path(os.environ.get("DATABASE_PATH", str(BASE / "data" / "rsvps.sqlite3")))
 DB_PATH.parent.mkdir(parents=True, exist_ok=True)
 ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD", "")
@@ -41,14 +41,14 @@ WA_TOKEN = os.getenv("WHATSAPP_ACCESS_TOKEN", "")
 WA_SENDER = os.getenv("WHATSAPP_PHONE_NUMBER_ID", "")
 WA_TEMPLATE = os.getenv("WHATSAPP_TEMPLATE_NAME", "")
 WA_LANG = os.getenv("WHATSAPP_TEMPLATE_LANGUAGE", "pt_PT")
-WA_TO = re.sub(r"\D", "", os.getenv("WHATSAPP_TO", "258877697751"))
+WA_TO = re.sub(r"\D", "", os.getenv("WHATSAPP_TO", ""))
 META_API_VERSION = os.getenv("WHATSAPP_GRAPH_VERSION", "v27.0")
 WHATSAPP_READY = all((WA_TOKEN, WA_SENDER, WA_TEMPLATE, WA_TO))
 ADMIN_READY = bool(ADMIN_PASSWORD and len(SESSION_SECRET) >= 32 and "SUBSTITUIR" not in ADMIN_PASSWORD.upper() and "SUBSTITUIR" not in SESSION_SECRET.upper())
 MZ_TZ = ZoneInfo("Africa/Maputo")
 
 app = FastAPI(title="Dulce Marcos · 50 anos", docs_url=None, redoc_url=None, openapi_url=None)
-app.mount("/assets", StaticFiles(directory=STATIC / "assets"), name="assets")
+app.mount("/assets", StaticFiles(directory=STATIC / "assets" if (STATIC / "assets").exists() else STATIC), name="assets")
 
 @app.middleware("http")
 async def security_headers(request: Request, call_next):
