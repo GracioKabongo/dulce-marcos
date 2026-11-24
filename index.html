@@ -13,7 +13,47 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;450;500;600;700&display=swap" rel="stylesheet" />
   <link rel="preload" href="assets/dulce-hero.webp" as="image" type="image/webp" />
-  <link rel="stylesheet" href="styles.css?v=20261124-2" />
+  <link rel="stylesheet" href="styles.css?v=20261124-envelope-v4" />
+<style id="dm-envelope-v4-styles">
+.special-invite{background:radial-gradient(ellipse at 50% 40%,#fffdf8,#f5ecdb 87%);padding-top:82px;padding-bottom:48px;overflow:hidden}
+.special-invite-wrap{display:flex;flex-direction:column;align-items:center;text-align:center;max-width:850px;margin:auto}
+.special-invite .eyebrow{margin:0 0 46px;letter-spacing:.29em;font-weight:700;font-size:10px;color:#a77838}
+.dm-envelope{--env-h:218px;--env-b:43px;--paper-h:230px;position:relative;display:block;flex:0 0 auto;width:min(420px,100%);height:398px;margin:0 auto;padding:0;perspective:1000px;border:none;outline-offset:9px;background:transparent;appearance:none;cursor:pointer;isolation:isolate;-webkit-tap-highlight-color:transparent}
+.dm-envelope:focus-visible{outline:2px solid #a77838}
+.dm-envelope>span{position:absolute;display:block;pointer-events:none}
+.dm-envelope-shadow{left:9%;width:82%;height:24px;bottom:17px;border-radius:100%;background:rgba(103,70,35,.16);filter:blur(15px);transition:transform 1.2s ease}
+.dm-envelope-back{z-index:1;left:0;right:0;bottom:var(--env-b);height:var(--env-h);border:1px solid #dfc89f;background:linear-gradient(145deg,#efe3cf,#e2ceac);box-shadow:0 19px 42px rgba(104,75,38,.12)}
+.dm-envelope-paper{z-index:2;left:8%;width:84%;bottom:var(--env-b);height:var(--paper-h);padding:10px;background:linear-gradient(160deg,#fffefa,#f9f2e7);border:1px solid #dcc6a0;box-shadow:0 4px 12px rgba(79,59,32,.12);transform:translateY(0);transition:transform 1.28s cubic-bezier(.18,.80,.17,1) 0s,box-shadow .8s ease}
+.dm-envelope-paper-inner{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;height:100%;border:1px solid #e9d9bf;padding:15px 3px 8px;gap:4px}
+.dm-paper-eyebrow{color:#b1946b;font-family:var(--sans,'DM Sans',sans-serif);font-size:8px;letter-spacing:.18em;font-weight:600;line-height:1.3}
+.dm-envelope-paper-inner strong{font-family:var(--serif,'Cormorant Garamond',Georgia,serif);font-size:36px;font-weight:500;line-height:1.1;font-style:italic;color:#745839;white-space:nowrap}
+.dm-envelope-paper-inner em{font-family:var(--serif,'Cormorant Garamond',Georgia,serif);font-size:51px;font-weight:500;line-height:1;color:#b48b51}
+.dm-paper-date{font-family:var(--sans,'DM Sans',sans-serif);font-size:9px;letter-spacing:.11em;color:#837260;line-height:1.3;white-space:nowrap;margin-top:3px}
+.dm-envelope-left,.dm-envelope-right,.dm-envelope-bottom{z-index:4;bottom:var(--env-b);height:var(--env-h);left:0;width:100%}
+.dm-envelope-left{background:linear-gradient(120deg,#f9eddb,#efdfc2);clip-path:polygon(0 0,54% 53%,0 100%)}
+.dm-envelope-right{background:linear-gradient(235deg,#f4e6d0,#e7d2af);clip-path:polygon(100% 0,46% 53%,100% 100%)}
+.dm-envelope-bottom{background:linear-gradient(20deg,#edd8b7,#f7e8cf);clip-path:polygon(0 100%,50% 48%,100% 100%);border-bottom:1px solid #dec59b}
+.dm-envelope-flap{z-index:6;left:0;width:100%;height:calc(var(--env-h)*.52);bottom:calc(var(--env-b) + var(--env-h)*.48);background:linear-gradient(165deg,#f3e6cf,#e3cca8);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:50% 0;transform:rotateX(0deg);backface-visibility:visible;transition:transform .85s cubic-bezier(.18,.78,.18,1) .85s,z-index 0s 1s;filter:drop-shadow(0 3px 2px rgba(104,78,38,.09))}
+.dm-envelope-seal{z-index:7;left:50%;bottom:calc(var(--env-b) + var(--env-h)*.48 - 30px);width:62px;height:62px;display:grid!important;place-items:center;border:1px solid rgba(255,247,228,.50);border-radius:50%;background:radial-gradient(circle at 27% 25%,#e4c883,#ad803b 70%,#8b5b24);box-shadow:0 6px 17px rgba(119,86,37,.22);color:#fffaf0;font-family:var(--serif,Georgia,serif);font-size:28px;font-style:italic;transform:translateX(-50%) scale(1);transition:opacity .23s ease 1s,transform .35s ease 1s}
+.dm-envelope.is-open .dm-envelope-seal{opacity:0;transform:translateX(-50%) scale(.7);transition-delay:0s}
+.dm-envelope.is-open .dm-envelope-flap{z-index:1;transform:rotateX(180deg);transition:transform .85s cubic-bezier(.18,.78,.18,1) .25s,z-index 0s .70s}
+.dm-envelope.is-open .dm-envelope-paper{transform:translateY(-142px);box-shadow:0 16px 40px rgba(89,66,38,.18);transition-delay:1.12s}
+.dm-envelope.is-open .dm-envelope-shadow{transform:scaleX(1.12)}
+.dm-envelope-hint{margin:-3px 0 0;font-family:var(--serif,Georgia,serif);font-size:22px;font-style:italic;font-weight:500;color:#8b7964}
+@media(max-width:760px){.special-invite{padding-top:65px;padding-bottom:46px}.special-invite .eyebrow{margin-bottom:35px;font-size:9px;letter-spacing:.22em}.dm-envelope{--env-h:170px;--env-b:34px;--paper-h:190px;width:min(330px,100%);height:330px}.dm-envelope-paper-inner{padding:14px 3px 7px;gap:3px}.dm-paper-eyebrow{font-size:7px}.dm-envelope-paper-inner strong{font-size:29px}.dm-envelope-paper-inner em{font-size:39px}.dm-paper-date{font-size:7px;letter-spacing:.08em}.dm-envelope-seal{height:54px;width:54px;font-size:24px;bottom:calc(var(--env-b) + var(--env-h)*.48 - 26px)}.dm-envelope.is-open .dm-envelope-paper{transform:translateY(-115px)}.dm-envelope-hint{font-size:19px}}
+@media(max-width:360px){.dm-envelope{--env-h:155px;--paper-h:178px;height:310px}.dm-envelope.is-open .dm-envelope-paper{transform:translateY(-104px)}.dm-envelope-paper-inner strong{font-size:26px}.dm-envelope-paper-inner em{font-size:36px}}
+@media(prefers-reduced-motion:reduce){.dm-envelope>span{transition-duration:.01ms!important;transition-delay:0ms!important}}
+.countdown-section{background:linear-gradient(180deg,#f5ecdb,#f9f6ef);padding-top:26px;padding-bottom:115px}
+.countdown-card{text-align:center;max-width:760px;margin:auto}
+.countdown-card .eyebrow{font-size:10px;color:#a77838;letter-spacing:.28em;font-weight:700}
+.countdown-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:26px auto 0;max-width:760px}
+.countdown-box{min-width:0;background:#faf7f0;padding:7px;border:1px solid #d5b16e;box-shadow:0 5px 22px rgba(120,85,34,.05);aspect-ratio:1.07;display:flex;justify-content:center;flex-direction:column}
+.countdown-box strong,.countdown-box span{display:block;width:100%;background:#fffdf8}
+.countdown-box strong{padding:15px 4px 2px;border:1px solid #ebd7b5;border-bottom:none;color:#2f241b;font-family:var(--serif,Georgia,serif);font-weight:400;font-size:clamp(47px,5.5vw,69px);line-height:1;font-variant-numeric:tabular-nums}
+.countdown-box span{padding:7px 2px 16px;border:1px solid #ebd7b5;border-top:none;color:#a77838;font-size:9px;font-family:var(--sans,Arial,sans-serif);font-weight:700;letter-spacing:.19em}
+.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+@media(max-width:760px){.countdown-section{padding-top:28px;padding-bottom:83px}.countdown-grid{gap:8px;margin-top:21px}.countdown-box{padding:4px}.countdown-box strong{font-size:clamp(30px,8.5vw,44px);padding:11px 1px 1px}.countdown-box span{font-size:7px;letter-spacing:.08em;padding:7px 0 11px}}
+</style>
 </head>
 <body>
   <div class="page-grain" aria-hidden="true"></div>
@@ -52,24 +92,28 @@
       </div>
     </section>
 
+
     <section class="special-invite section-pad" id="carta" aria-labelledby="special-invite-title">
       <div class="special-invite-wrap reveal">
         <p class="eyebrow centered" id="special-invite-title">UM CONVITE ESPECIAL</p>
-        <button class="envelope-scene" id="envelope-trigger" type="button" aria-expanded="false" aria-controls="letter-card">
-          <span class="envelope-shadow" aria-hidden="true"></span>
-          <span class="envelope-back" aria-hidden="true"></span>
-          <span class="envelope-letter" id="letter-card">
-            <span class="letter-inner">
-              <span class="letter-title">Dulce Marcos</span>
-              <strong>50 anos</strong>
-              <small>04 de Dezembro de 2026 · 18h00</small>
+        <button type="button" id="dm-envelope-trigger" class="dm-envelope" aria-expanded="false" aria-label="Abrir a carta do convite de Dulce Marcos">
+          <span class="dm-envelope-shadow" aria-hidden="true"></span>
+          <span class="dm-envelope-back" aria-hidden="true"></span>
+          <span class="dm-envelope-paper" aria-hidden="true">
+            <span class="dm-envelope-paper-inner">
+              <span class="dm-paper-eyebrow">UM CONVITE PARA SI</span>
+              <strong>Dulce Marcos</strong>
+              <em>50 anos</em>
+              <span class="dm-paper-date">04 DE DEZEMBRO DE 2026 · 18H</span>
             </span>
           </span>
-          <span class="envelope-front" aria-hidden="true"></span>
-          <span class="envelope-flap" aria-hidden="true"></span>
-          <span class="envelope-seal" aria-hidden="true">DM</span>
+          <span class="dm-envelope-left" aria-hidden="true"></span>
+          <span class="dm-envelope-right" aria-hidden="true"></span>
+          <span class="dm-envelope-bottom" aria-hidden="true"></span>
+          <span class="dm-envelope-flap" aria-hidden="true"></span>
+          <span class="dm-envelope-seal" aria-hidden="true">DM</span>
         </button>
-        <p class="tap-hint">Toque para abrir</p>
+        <p class="dm-envelope-hint" id="dm-envelope-hint">Toque na carta para abrir</p>
       </div>
     </section>
 
@@ -162,5 +206,6 @@
   </main>
   <footer class="site-footer"><div class="footer-monogram">D<span>·</span>M</div><div class="footer-message">Momentos especiais são feitos de pessoas especiais.</div><div class="footer-bottom"><span>04 DE DEZEMBRO · 2026</span><span>FEITO COM CARINHO PARA DULCE MARCOS</span></div></footer>
   <script src="app.js" defer></script>
+<script>(function(){const b=document.getElementById('dm-envelope-trigger');const h=document.getElementById('dm-envelope-hint');if(!b||!h)return;b.addEventListener('click',function(){const open=b.classList.toggle('is-open');b.setAttribute('aria-expanded',String(open));b.setAttribute('aria-label',open?'Fechar a carta do convite de Dulce Marcos':'Abrir a carta do convite de Dulce Marcos');h.textContent=open?'Toque para voltar a fechar':'Toque na carta para abrir';});})();</script>
 </body>
 </html>
